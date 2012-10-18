@@ -8,3 +8,15 @@
 .mt-output .mt-style {
   font-size: x-small;
 }
+
+.mt-test {
+  border-left: 10px solid #fff;
+}
+
+.mt-pass {
+  border-left: 10px solid #cfc;
+}
+
+.mt-fail {
+  border-left: 10px solid #fcc;
+}

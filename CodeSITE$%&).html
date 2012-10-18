@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<link rel="stylesheet/less" type="text/css" href="styles.less">
+<script src="less.js" type="text/javascript"></script>
+  <head>
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="../lib/codemirror.css">
+    <script src="../lib/codemirror.js"></script>
+    <script src="../mode/clike/clike.js"></script>
+    <script src="../keymap/emacs.js"></script>
+    <link rel="stylesheet" href="../doc/docs.css">
+<link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style type="text/css">
+      .CodeMirror {border-top: 1px solid #eee; border-bottom: 1px solid #eee;}
+    </style>
+  </head>
+  <body>
+  <h1>Code Editor</h1>
+     <div class="navbar navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+        <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+<div class="alert">
+  <strong>Welcome!</strong> This is a coding site with lots of coding to do!
+    <form><textarea id="code" name="code">
+<script>
+      CodeMirror.commands.save = function() {
+        var elt = editor.getWrapperElement();
+        elt.style.background = "#def";
+        setTimeout(function() { elt.style.background = ""; }, 1000);
+      };
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        mode: "text/x-csrc",
+        keyMap: "emacs"
+      });
+    </script>
+</textarea></form>
+
+
+    <script>
+      CodeMirror.commands.save = function() {
+        var elt = editor.getWrapperElement();
+        elt.style.background = "#def";
+        setTimeout(function() { elt.style.background = ""; }, 300);
+      };
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        mode: "text/x-csrc",
+        keyMap: "emacs"
+      });
+    </script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+
